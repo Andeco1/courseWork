@@ -1,0 +1,204 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background-image: url('/resources/photos/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 150, 255, 0.8);
+}
+
+.button {
+    background-color: rgba(0, 150, 255, 0.7);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    z-index: 2;
+}
+.button:hover {
+    background-color: rgba(0, 150, 255, 1);
+    transform: scale(1.05);
+}
+.button:active {
+    transform: scale(0.95);
+}
+footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 2;
+}
+section{
+    width: 100%;
+    margin: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    grid-column: 1/4;
+}
+main{
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+header{
+    position: sticky;
+    top:0;
+    z-index: 100;
+    grid-row: 2/3;
+    background: #2a0f45;
+    border-radius: 0 0 50px 500px;
+}
+.top{
+    background: #2a0f45;
+}
+.top img{
+    position: absolute;
+    left:10px;
+    top:5px;
+}
+.nav-list li{
+    background-color: #481259;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    list-style-type: none;
+    transition: background-color 1s ease;
+}
+.nav-list li:hover{
+    background-color: #f189ef;
+
+}
+a{
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.5s ease;
+    text-decoration: none;
+}
+a:hover{
+    color: #481259;
+}
+.nav-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* бургер меню */
+.menu-toggle {
+    display: none;
+}
+
+/* Иконка бургер-меню */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    background-color: #ef88ed;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    /* Показываем бургер-меню на мобильных устройствах */
+    .menu-icon {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    /* Скрываем навигацию по умолчанию */
+    .nav {
+        display: flex;
+        align-items: center;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 5px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        width: 250px;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #dfdee0;
+        border-radius: 50% 0 0 50%;
+        opacity: 0; /* Прозрачность */
+        pointer-events: none; /* Отключаем клики */
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Изменение иконки на "крестик" при активации */
+    .menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Показываем меню при активном чекбоксе */
+    .menu-toggle:checked ~ .nav {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+
+
+
+}

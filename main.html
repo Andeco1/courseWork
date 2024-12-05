@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Солнечная система</title>
+  <link rel="stylesheet" href="./css/general.css">
+  <link rel="stylesheet" href="./css/gallery.css">
+</head>
+<body>
+  <div class="top">
+    <img src="resources/photos/rocket-lunch.png" width="50" height="50" alt="Логотип">
+    <h1>Солнечная система</h1>
+  </div>
+  <header>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href = "#tests">Изображения</a></li>
+        <li><a href = "#games">Дополнительна информация</a></li>
+        <li><a href = "#gallery">Объекты солнечной системы</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <button class="button">Planets</button>
+    </section>
+    <section id="gallery">
+      <h1 style="text-align: center;">Карта планет</h1>
+      <div class="gallery">
+        <div class="gallery-item" data-photo-id="sun">
+            <img src="resources/photos/sun.jpg" alt="Солнце">
+            <div class="overlay"></div>
+            <div class="text">Описание фото 1</div>
+        </div>
+
+        <div class="gallery-item" data-photo-id="mercury">
+            <img src="resources/photos/mercury.jpg" alt="Меркурий">
+            <div class="overlay"> </div>
+            <div class="text">Описание фото 2</div>
+        </div>
+
+        <div class="gallery-item" data-photo-id="venus">
+            <img src="resources/photos/venus.png" alt="Венера">
+            <div class="overlay"></div>
+            <div class="text">Описание фото 3</div>
+        </div>
+
+        <div class="gallery-item" data-photo-id="earth">
+            <img src="resources/photos/earth.png" alt="Земля">
+            <div class="overlay"> </div>
+            <div class="text">Описание фото 3</div>
+        </div>
+
+        <div class="gallery-item" data-photo-id="moon">
+            <img src="resources/photos/moon.jpg" alt="Луна">
+            <div class="overlay"></div>
+            <div class="text">Описание фото 3</div>
+        </div>
+
+        <div class="gallery-item" data-photo-id="mars">
+            <img src="resources/photos/mars.jpg" alt="Марс">
+            <div class="overlay"></div>
+            <div class="text">Описание фото 3</div>
+        </div>
+
+        <div class="gallery-item" data-photo-id="jupiter">
+            <img src="resources/photos/jupiter.jpg" alt="Юпитер">
+            <div class="overlay"></div>
+            <div class="text">Описание фото 3</div>
+        </div>
+
+        <div class="gallery-item" data-photo-id="saturn">
+            <img src="resources/photos/saturn.png" alt="Сатурн">
+            <div class="overlay"></div>
+            <div class="text">Описание фото 3</div>
+        </div>
+
+        <div class="gallery-item" data-photo-id="uranus">
+            <img src="resources/photos/uranus.png" alt="Уран">
+            <div class="overlay"></div>
+            <div class="text">Описание фото 3</div>
+        </div>
+
+        <div class="gallery-item" data-photo-id="neptune">
+            <img src="resources/photos/neptune.jpg" alt="Нептун">
+            <div class="overlay"></div>
+            <div class="text">Описание фото 3</div>
+        </div>
+
+        <div class="gallery-item" data-photo-id="pluto">
+            <img src="resources/photos/pluto.jpg" alt="Плутон">
+            <div class="overlay"></div>
+            <div class="text">Описание фото 3</div>
+        </div>
+      </div>
+      <script src="./js/getPhotoInfo.js"></script>
+    </section>
+    <section id="tests">
+      <button class="button">Asteroids</button>
+    </section>
+    <section id="games">
+      <button class="button">Comets</button>
+    </section>
+    <section id="subscription">
+
+    </section>
+
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
