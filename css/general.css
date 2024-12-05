@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: #ffffff;
-    background-image: url('/resources/photos/background.jpg');
+    background: linear-gradient(45deg, black, #efcbef);
     background-size: cover;
     background-position: center;
     height: 100%;
