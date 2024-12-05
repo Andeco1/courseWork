@@ -7,41 +7,144 @@ footer {
     box-shadow: 0 -10px 30px rgba(200, 200, 200, 0.8);
 }
 
-/* Кратеры луны */
-.crater {
-    position: absolute;
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+/* Стили для ссылок */
+.footer-social ul, .footer-contact ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-social li, .footer-contact li {
+    margin: 10px;
+}
+
+/* Кратеры */
+.crater,.crater1 {
+    position: relative;
+    width: 100px;
+    height: 100px;
     background-color: #888;
     border-radius: 50%;
     box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Разные размеры и позиции кратеров */
-.crater:nth-child(1) {
-    width: 40px;
-    height: 40px;
-    top: 60px;
-    left: 150px;
+.crater:hover {
+    transform: scale(1.2); /* Увеличиваем кратер при наведении */
 }
 
-
-/* Анимация луны — легкая пульсация */
+.crater a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+.crater:nth-child(1){
+    width: 50px;
+    height: 50px;
+    left:-20px;
+}
+.crater:nth-child(2){
+    bottom:-10px;
+}
+.crater:nth-child(3){
+    width: 75px;
+    height: 75px;
+    bottom:20px;
+}
+.crater a:hover {
+    color: #f39c12; /* Изменение цвета при наведении */
+}
+.crater1:hover{
+    transform: scale(1.2);
+    color: #f39c12;
+}
+.crater1{
+    width: 230px;
+}
+/* "Поверхность Луны" */
 .moon-core {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    background: radial-gradient(circle, #bbb, #ccc);
+    z-index: -1;
     border-radius: 50%;
     animation: pulse 3s ease-in-out infinite;
-    background: radial-gradient(circle, #bbb, #ccc);
 }
 
-/* Анимация пульсации луны */
+/* Анимация лунной поверхности */
 @keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .footer-social ul, .footer-contact ul {
+        flex-direction: column;
+        align-items: center;
     }
-    50% {
-        transform: scale(1.05);
+
+    .crater {
+        width: 80px;
+        height: 80px;
     }
+
+    .crater a {
+        font-size: 12px;
+    }
+    .moon-core{
+        height: 200%;
+    }
+    .crater:nth-child(1){
+        width: 50px;
+        height: 50px;
+        left:-40px;
+        top:-20px;
+    }
+    .crater:nth-child(2){
+        bottom:90px;
+        left: 50px;
+    }
+    .crater:nth-child(3){
+        width: 75px;
+        height: 75px;
+        bottom:130px;
+        right: 20px;
+    }
+}
+
+.copyright{
+    z-index: 10;
+    position: relative;
+    top:-20px;
+    color: black;
+}
+h4{
+    color: #494949;
+
+}
+
+.footer-social, .footer-contact{
+    padding-top: 25px;
+    padding-left: 20px;
 }

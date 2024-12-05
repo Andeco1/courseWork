@@ -41,6 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 <h2 class="name">${planet.title}</h2>
                 <div class="img"> 
                 <img src="${planet.imgSrc}" alt="${planet.title}"></div>
+                <div class="img"> 
+                    <div class="loader">
+                      <div class="face">
+                        <div class="circle"></div>
+                      </div>
+                      <div class="face">
+                        <div class="circle"></div>
+                      </div>
+                    </div>
+                </div>
                 <div class="description">Описание: ${planet.description}</div>
                 <div class="year"><strong>Год обнаружения:</strong> ${planet.year}</div>
                 <div class="fact"><strong>Интересный факт:</strong> ${planet.fact}</div>
