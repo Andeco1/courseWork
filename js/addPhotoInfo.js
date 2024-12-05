@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                       </div>
                     </div>
                 </div>
-                <div class="description">Описание: ${planet.description}</div>
+                <div class="description"> <t> Описание: </t>${planet.description}</div>
                 <div class="year"><strong>Год обнаружения:</strong> ${planet.year}</div>
                 <div class="fact"><strong>Интересный факт:</strong> ${planet.fact}</div>
                 <div class="literature">

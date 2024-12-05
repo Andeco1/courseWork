@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         star.style.top = Math.random() * 100 + 'vh';
         star.style.left = Math.random() * 100 + 'vw';
 
-        star.style.animationDuration = Math.random() * 3 + 2 + 's';
+        star.style.animationDuration = Math.random() * 10 + 2 + 's';
         star.style.animationDelay = Math.random() * 5 + 's';
 
         starContainer.appendChild(star);

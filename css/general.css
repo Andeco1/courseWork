@@ -23,7 +23,7 @@ h1 {
 }
 
 .button {
-    background-color: rgba(0, 150, 255, 0.7);
+    background-color: rgb(72, 18, 89);
     border: none;
     color: white;
     padding: 15px 30px;
@@ -39,7 +39,7 @@ h1 {
     z-index: 2;
 }
 .button:hover {
-    background-color: rgba(0, 150, 255, 1);
+    background-color: rgb(241, 137, 239);
     transform: scale(1.05);
 }
 .button:active {
@@ -229,6 +229,13 @@ a:hover{
         transform: translateY(0);
     }
     100% {
-        transform: translateY(500px);
+        transform: translateY(1000px);
     }
+}
+
+p{
+    font-size: 1.7rem;
+    text-align: justify;
+    text-indent: 40px;
+    margin: 30px;
 }
