@@ -7,18 +7,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 10px;
 }
 .planet{
     max-width: 95vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(5, auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+@media (max-width: 1268px){
+    max-width: 90vw;
 }
 .name{
     grid-area: 1 / 1 / 2 / 2;
-    font-size: 5em;
+    font-size: 4em;
 }
 .year{
     grid-area: 3 / 1 / 4 / 2;
@@ -32,8 +39,8 @@
     height: 100%;
 }
 .img img{
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 450px;
+    max-height: 450px;
     object-fit: contain;
 }
 .fact{
@@ -43,6 +50,10 @@
 .literature{
     grid-area: 5 / 1 / 6 / 3;
     font-size: 1.2em;
+    text-align: left;
+}
+.literature h3{
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -52,6 +63,7 @@
     .planet{
         display: flex;
         flex-direction: column;
-
+        max-width: 90vw;
     }
+
 }

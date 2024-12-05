@@ -15,6 +15,7 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -95,7 +96,7 @@ header{
 
 }
 a{
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
     transition: color 0.5s ease;
     text-decoration: none;
@@ -144,6 +145,10 @@ a:hover{
 
 @media (max-width: 768px) {
     /* Показываем бургер-меню на мобильных устройствах */
+
+    .section{
+        margin: 15px;
+    }
     .menu-icon {
         display: flex;
         position: absolute;
@@ -164,7 +169,6 @@ a:hover{
         width: 250px;
         height: 100vh;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         border: 1px solid #dfdee0;
         border-radius: 50% 0 0 50%;
@@ -197,8 +201,5 @@ a:hover{
         opacity: 1;
         pointer-events: all;
     }
-
-
-
 
 }
