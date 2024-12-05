@@ -142,8 +142,18 @@ a:hover{
     background-color: #ef88ed;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
+p{
+    font-size: 1.7rem;
+    text-align: justify;
+    text-indent: 40px;
+    margin: 30px;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 20px rgb(157, 79, 180);
 
+}
 @media (max-width: 768px) {
+    p{
+        font-size: 1.3rem;
+    }
 
     .section{
         margin: 15px;
@@ -233,9 +243,3 @@ a:hover{
     }
 }
 
-p{
-    font-size: 1.7rem;
-    text-align: justify;
-    text-indent: 40px;
-    margin: 30px;
-}

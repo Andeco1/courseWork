@@ -136,3 +136,6 @@ main{
     justify-content: center;
     align-items: center;
 }
+.nav{
+    max-height: 600px;
+}
