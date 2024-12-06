@@ -225,6 +225,7 @@ p{
 
     .menu-toggle:checked ~ .nav {
         visibility: visible;
+        top:20px;
         opacity: 1;
         pointer-events: all;
     }

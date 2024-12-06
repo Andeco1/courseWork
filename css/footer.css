@@ -149,3 +149,9 @@ h4{
     padding-top: 25px;
     padding-left: 20px;
 }
+
+@media (max-width: 768px){
+    .footer-contact{
+        display: none;
+    }
+}
