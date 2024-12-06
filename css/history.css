@@ -58,23 +58,6 @@ h1, h2 {
     max-width: 600px;
 }
 
-@media (max-width: 768px) {
-    .section {
-        flex-direction: column;
-        transform: translateX(-100vw); /* На мобильных все блоки выезжают слева */
-    }
-
-    .section:nth-child(even) {
-        transform: translateX(-100vw); /* И четные блоки тоже */
-    }
-
-    .section img {
-        width: 100%;
-        margin: 0 0 20px 0;
-    }
-}
-
-
 
 
 /* Анимации для выезда секций */
@@ -124,3 +107,21 @@ main{
 h2{
     font-size: 2rem;
 }
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        transform: translateX(-100vw); /* На мобильных все блоки выезжают слева */
+    }
+
+    .section:nth-child(even) {
+        transform: translateX(-100vw); /* И четные блоки тоже */
+    }
+
+    .section img {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
+
