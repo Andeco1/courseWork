@@ -1,0 +1,90 @@
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.planets {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #555;
+    margin: 35px;
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planets h2 {
+    position: absolute;
+    top: 230px;
+    text-transform: uppercase;
+    font-size: 1.6em;
+}
+
+/* Спутники */
+.satellite {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: #ccc;
+    animation: rotate 10s infinite linear;
+    z-index: 10;
+
+}
+
+#moon { animation-duration: 5s; background-сolor: #494949 }
+#io { animation-duration: 8s;  }
+#europa { animation-duration: 10s;  }
+#ganymede { animation-duration: 12s; }
+#callisto { animation-duration: 15s;  }
+#titan { animation-duration: 9s;   }
+#enceladus { animation-duration: 11s; }
+#triton { animation-duration: 14s;  }
+
+/* Анимация вращения */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) translateX(120px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+}
+
+/* Наведение на спутник */
+.satellite:hover {
+    animation-play-state: paused;
+    transform: scale(1.5);
+}
+
+.satellites ul li{
+    list-style-type: none;
+}
+
+
+#earth{background: url("../resources/photos/GEarth.png") no-repeat center center; background-size: contain}
+#jupiter{background: url("../resources/photos/GJupiter.png") no-repeat center center; background-size: contain}
+#saturn{background: url("../resources/photos/GSaturn.png") no-repeat center center; background-size: contain}
+#neptune{background: url("../resources/photos/GNeptune.png") no-repeat center center; background-size: contain}
+
+.satellite-text{
+    position: absolute;
+}
+p{
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+}
+
+header{
+    margin-bottom: 0;
+}

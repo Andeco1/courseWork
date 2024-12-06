@@ -1,5 +1,6 @@
 footer {
     position: relative;
+    top:10px;
     height: 200px;
     background: linear-gradient(to top, #aaa, #ccc);
     border-radius: 50% 50% 0 0;

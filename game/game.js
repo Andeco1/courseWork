@@ -39,7 +39,7 @@ function removePlanet(event) {
     const slot = event.target;
 
     if (slot.classList.contains('planet')) {
-        slot.textContent = ''; // Очищаем текст
+        slot.textContent = '';
         slot.classList.remove('planet'); // Удаляем класс
         slot.removeAttribute('data-name'); // Удаляем атрибут имени
     }

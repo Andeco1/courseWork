@@ -24,21 +24,23 @@
     </label>
     <nav class="nav">
       <ul class="nav-list">
-        <li><a href = "#tests">Изображения</a></li>
-        <li><a href = "#games">Дополнительна информация</a></li>
-        <li><a href = "#gallery">Объекты солнечной системы</a></li>
+        <li><a href = "#subscription">Подписка</a></li>
+        <li><a href = "#games">Игра</a></li>
+        <li><a href = "#history">Астрономия</a></li>
+        <li><a href = "#moons">Спутники</a></li>
+        <li><a href = "#gallery">Галерея планет</a></li>
       </ul>
     </nav>
   </header>
-  <main>
 
+  <main>
     <section id="about">
       <p>Наша Солнечная система – это грандиозное космическое пространство, в центре которого находится яркая звезда – Солнце. Вокруг него вращаются восемь планет, каждая из которых уникальна по своим характеристикам и условиям. Помимо планет, здесь есть карликовые планеты, спутники, кометы, астероиды и другие космические объекты, составляющие сложную и гармоничную систему.</p>
       <p>Мы приглашаем вас отправиться в увлекательное путешествие по этому космосу: узнать больше о загадках Марса, величии Юпитера, кольцах Сатурна и далекой холодной Плутоновой орбите. На страницах нашего сайта вы найдете интересные факты, последние научные открытия, а также уникальные изображения и видео.</p>
       <p>Погружайтесь в тайны Солнечной системы вместе с нами, исследуйте и расширяйте свои горизонты!</p>
     </section>
     <section id="gallery">
-      <h1 style="text-align: center;">Карта планет</h1>
+      <h1 style="text-align: center;">Галерея планет</h1>
         <div class="gallery">
             <div class="gallery-item" data-photo-id="sun">
                 <img src="./resources/photos/sun.jpg" alt="Солнце">
@@ -62,12 +64,6 @@
                 <img src="./resources/photos/earth.png" alt="Земля">
                 <div class="overlay"></div>
                 <div class="text">Земля<br>3-я планета<br>150 млн км от Солнца</div>
-            </div>
-
-            <div class="gallery-item" data-photo-id="moon">
-                <img src="./resources/photos/moon.jpg" alt="Луна">
-                <div class="overlay"></div>
-                <div class="text">Луна<br>Спутник Земли<br>384 тыс км от Земли</div>
             </div>
 
             <div class="gallery-item" data-photo-id="mars">
@@ -106,18 +102,24 @@
                 <div class="text">Плутон<br>Карликовая планета<br>5.9 млрд км от Солнца</div>
             </div>
         </div>
-        <script src="./js/getPhotoInfo.js"></script>
+        <script src="planets/getPhotoInfo.js"></script>
     </section>
-    <section id="tests">
-      <button class="button">Asteroids</button>
+    <section id="moons">
+        <p>Спутники солнечной системы — это настоящие природные спутники планет, которые играют важную роль в их динамике и истории. Давайте погрузимся в этот увлекательный мир и откроем его уникальные тайны!</p>
+        <a href="moons/smallObjects.html"> <button class="button">Спутники солнечной системы</button></a>
+    </section>
+    <section id="history">
+        <p>История астрономии — это путешествие через тысячелетия, где наука и мистицизм переплетаются, а небесные тела играют ключевую роль в жизни человечества. Однако с развитием астрономии и началом систематического изучения солнечной системы, наше восприятие этих небесных тел изменилось.</p>
+        <a href="history/history.html"> <button class="button">История развития астрономии</button></a>
     </section>
     <section id="games">
-        <a href="game.html"> <button class="button">Игра</button></a>
+        <p>Хотите проверить свои знания? Сыграйте в игру на знание планет солнечной системы!</p>
+        <a href="game/game.html"> <button class="button">Играть</button></a>
     </section>
     <section id="subscription">
         <p>Познакомьтесь с планетами, спутниками и другими объектами нашей Солнечной системы, подписавшись на рассылку. Получайте новости о планетах, космосе и новейших миссиях прямо в свой почтовый ящик.</p>
         <p>Присоединяйтесь к нашему космическому путешествию!</p>
-        <a href="subscription.html"> <button class="button">Подписаться на рассылку</button></a>
+        <a href="subscription/subscription.html"> <button class="button">Подписаться на рассылку</button></a>
     </section>
 
   </main>
@@ -142,7 +144,7 @@
 
     <div class="moon-core">
     </div>
-    <p class="copyright">@2024 Солнечная система</p>
+    <div class="copyright">@2024 Солнечная система</div>
 </footer>
 </body>
 </html>

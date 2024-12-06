@@ -1,0 +1,85 @@
+
+.planet {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.planet:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.7);
+}
+.planet[data-name="Меркурий"] { background: url("../resources/photos/GMercury.png")  no-repeat center center; background-size: cover}
+.planet[data-name="Венера"] { background: url("../resources/photos/GVenus.png") no-repeat center center; background-size: cover}
+.planet[data-name="Земля"] { background: url("../resources/photos/GEarth.png")no-repeat center center; background-size: cover }
+.planet[data-name="Марс"] { background: url("../resources/photos/GMars.png")no-repeat center center; background-size: cover}
+.planet[data-name="Юпитер"] { background: url("../resources/photos/GJupiter.png")no-repeat center center; background-size: cover}
+.planet[data-name="Сатурн"] { background: url("../resources/photos/GSaturn.png")no-repeat center center; background-size: contain;}
+.planet[data-name="Уран"] { background: url("../resources/photos/GUranus.png")no-repeat center center; background-size: contain}
+.planet[data-name="Нептун"] { background: url("../resources/photos/GNeptune.png")no-repeat center center; background-size: cover }
+
+#drop-zone {
+    border: 2px dashed black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    margin-right: 40px;
+}
+#planet-list, #drop-zone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+    z-index: 10;
+}
+.drop-slot {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+#win-message {
+    font-size: 24px;
+    max-width: 400px;
+    color: #fdfdfd;
+    display: none;
+    background: #481259;
+    border-radius: 15px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin-top:180px;
+    margin-bottom: 180px;
+}
+main #win-message{
+    position: relative;
+    right: -50%;
+    transform: translateX(-50%);
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 150, 255, 0.8);
+}
+

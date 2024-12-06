@@ -135,6 +135,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 180px;
+    margin-top: 180px;
 }
 .nav{
     max-height: 600px;
