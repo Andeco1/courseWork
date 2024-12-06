@@ -175,7 +175,7 @@ p{
         display: flex;
         align-items: center;
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 5px;
         background: rgba(255, 255, 255, 0.1);

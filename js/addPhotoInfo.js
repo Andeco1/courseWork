@@ -1,17 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     const planetsContainer = document.getElementById('planets-container');
-
     function getPlanetIdFromUrl() {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get('id');
     }
     const planetId = getPlanetIdFromUrl();
-
     if (!planetId) {
         planetsContainer.innerHTML = "<p>Не указан параметр планеты в URL.</p>";
         return;
     }
-
     fetch('info.json')
         .then(response => response.text())
         .then(data => {
@@ -25,12 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function displayPlanet(planetsData, planetId) {
         const planet = planetsData[planetId];
-
         if (!planet) {
             planetsContainer.innerHTML = `<p>Планета с id "${planetId}" не найдена.</p>`;
             return;
         }
-
         const html = `
             <section class="planet">
                 <h2 class="name">${planet.title}</h2>
@@ -59,8 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </section>
         `;
-
-        // Вставляем HTML в контейнер
         planetsContainer.innerHTML = html;
     }
 });

@@ -34,17 +34,16 @@ function drop(event) {
     }
 }
 
-// Удаление планеты при двойном клике
 function removePlanet(event) {
     const slot = event.target;
 
     if (slot.classList.contains('planet')) {
         slot.textContent = '';
-        slot.classList.remove('planet'); // Удаляем класс
-        slot.removeAttribute('data-name'); // Удаляем атрибут имени
+        slot.classList.remove('planet');
+        slot.removeAttribute('data-name');
     }
 
-    checkWinCondition(); // Перепроверяем правильность
+    checkWinCondition();
 }
 
 function checkWinCondition() {
