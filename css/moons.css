@@ -28,7 +28,6 @@ main {
     font-size: 1.6em;
 }
 
-/* Спутники */
 .satellite {
     position: relative;
     width: 17px;
@@ -40,16 +39,15 @@ main {
 
 }
 
-#moon { animation-duration: 5s; background-сolor: #494949 }
-#io { animation-duration: 8s;  }
-#europa { animation-duration: 10s;  }
-#ganymede { animation-duration: 12s; }
-#callisto { animation-duration: 15s;  }
-#titan { animation-duration: 9s;   }
-#enceladus { animation-duration: 11s; }
-#triton { animation-duration: 14s;  }
+#moon { animation-duration: 5s; background: #494949 }
+#io { animation-duration: 8s;  background: #c9c258}
+#europa { animation-duration: 10s; background: #b8afa9}
+#ganymede { animation-duration: 12s; background: #b5ac9c}
+#callisto { animation-duration: 15s; background: #be8564}
+#titan { animation-duration: 9s;  background: #e8d583}
+#enceladus { animation-duration: 11s; background: #d1d1d1}
+#triton { animation-duration: 14s; background: #aeb4a6}
 
-/* Анимация вращения */
 @keyframes rotate {
     from {
         transform: rotate(0deg) translateX(120px) rotate(0deg);
@@ -85,6 +83,6 @@ p{
     border-radius: 20px;
 }
 
-header{
-    margin-bottom: 0;
+main{
+    margin-top:0;
 }

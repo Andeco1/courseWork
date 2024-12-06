@@ -53,8 +53,13 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+.form-container input[type="submit"]:hover  {
+    background-color: #fff158;
+    color: #000000;
+}
 /* Орбитальные планеты */
 .planet {
     position: absolute;

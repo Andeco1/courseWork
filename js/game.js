@@ -10,7 +10,7 @@ planetElements.forEach(planet => {
 dropSlots.forEach(slot => {
     slot.addEventListener('dragover', dragOver);
     slot.addEventListener('drop', drop);
-    slot.addEventListener('dblclick', removePlanet); // Добавляем событие двойного клика для удаления планеты
+    slot.addEventListener('dblclick', removePlanet);
 });
 
 function dragStart(event) {

@@ -1,24 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
     const planetsContainer = document.getElementById('planets-container');
 
-    // Функция для получения параметра id из URL
     function getPlanetIdFromUrl() {
         const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get('id'); // Возвращает значение параметра id
+        return urlParams.get('id');
     }
-
-    const planetId = getPlanetIdFromUrl(); // Получаем id планеты из URL
+    const planetId = getPlanetIdFromUrl();
 
     if (!planetId) {
         planetsContainer.innerHTML = "<p>Не указан параметр планеты в URL.</p>";
         return;
     }
 
-    // Загружаем данные из planets.txt
     fetch('info.json')
-        .then(response => response.text()) // Получаем текстовый ответ
+        .then(response => response.text())
         .then(data => {
-            const planetsData = JSON.parse(data); // Преобразуем в JSON
+            const planetsData = JSON.parse(data);
             displayPlanet(planetsData, planetId);
         })
         .catch(error => {
@@ -26,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
             planetsContainer.innerHTML = "<p>Не удалось загрузить данные о планетах.</p>";
         });
 
-    // Функция для отображения выбранной планеты на странице
     function displayPlanet(planetsData, planetId) {
         const planet = planetsData[planetId];
 
@@ -35,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Формируем HTML-код для выбранной планеты
         const html = `
             <section class="planet">
                 <h2 class="name">${planet.title}</h2>
