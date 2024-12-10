@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин</title>
+  <link rel="stylesheet" href="./css/general.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/shop.css">
+</head>
+<body>
+<div class="stars"></div>
+<script src="./js/stars.js"></script>
+<div class="top">
+  <img src="resources/photos/rocket-lunch.png" width="50" height="50" alt="Логотип">
+  <h1>Солнечная система</h1>
+</div>
+<header>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href = "subscription.html">Подписка</a></li>
+      <li><a href = "game.html">Игра</a></li>
+      <li><a href = "history.html">Астрономия</a></li>
+      <li><a href = "index.html">Главная страница</a></li>
+    </ul>
+  </nav>
+  <div class="header1">
+    <h1>Магазин</h1>
+    <div class="cart-icon" id="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </div>
+</header>
+
+<div class="cart-popup" id="cart-popup">
+  <h2>Корзина</h2>
+  <ul id="cart-items"></ul>
+  <p>Итого: <span id="total-price">0</span> ₽</p>
+  <button id="clear-cart">Очистить корзину</button>
+  <button id="purchase-button">Купить</button> <!-- Новая кнопка Купить -->
+</div>
+<p id="purchase-message" style="display: none;">Товары куплены!</p> <!-- Сообщение после покупки -->
+
+<main>
+  <div class="sort-section">
+    <label for="sort">Сортировать по:</label>
+    <select id="sort">
+      <option value="price-asc">Цена (по возрастанию)</option>
+      <option value="price-desc">Цена (по убыванию)</option>
+    </select>
+  </div>
+
+  <div class="product-list" id="product-list">
+    <div class="product" data-id="1" data-price="1000">
+      <img src="./resources/photos/globe.jpg" alt="Товар 1" class="product-image" height="250" width="250">
+      <h3>Статуэтка земли</h3>
+      <p>Цена: 1000 ₽</p>
+      <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+    <div class="product" data-id="2" data-price="1500">
+      <img src="./resources/photos/Rocket.jpg" alt="Товар 2" class="product-image" height="250" width="250">
+      <h3>Статуэтка ракеты</h3>
+      <p>Цена: 1500 ₽</p>
+      <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+    <div class="product" data-id="3" data-price="500">
+      <img src="./resources/photos/coin.jpg" alt="Товар 3" class="product-image" height="250" width="250">
+      <h3>Памятная монета</h3>
+      <p>Цена: 500 ₽</p>
+      <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+  </div>
+</main>
+<script src="./js/shop.js"></script>
+</body>
+<footer>
+  <div class="footer-container">
+    <div class="footer-social">
+      <h4>Следите за нами</h4>
+      <ul>
+        <li class="crater"><a href="https://Vk.com" target="_blank">VK</a></li>
+        <li class="crater"><a href="https://twitter.com" target="_blank">Telegram</a></li>
+        <li class="crater"><a href="https://instagram.com" target="_blank">RuTube</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Обратная связь</h4>
+      <ul>
+        <li class="crater1">Email: <a href="mailto:Andeco11@yandex.ru">Andeco11@yandex.ru</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="moon-core">
+  </div>
+  <div class="copyright">@2024 Солнечная система</div>
+</footer>
+</html>

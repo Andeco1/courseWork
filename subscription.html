@@ -7,6 +7,48 @@
   <link rel="stylesheet" href="./css/general.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/form.css">
+  <style>
+    /* Стили для капчи */
+    .hidden { display: none; }
+    .error { color: #ff0000; margin-top: 10px; background: #f2f349; border-radius: 5px;}
+    .success { color: green; margin-top: 10px; }
+
+    .form-container input[type="text"] {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 180px;
+    }
+
+    .form-container .captcha-buttons {
+      margin-top: 10px;
+    }
+
+    .form-container .captcha-buttons input[type="button"] {
+      padding: 10px 20px;
+      background-color: #ff6600;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    .form-container .captcha-buttons input[type="button"]:hover {
+      background-color: #ff0202;
+    }
+
+    #captchaText {
+      display: inline-block;
+      padding: 5px;
+      background-color: #ff4501;
+      color: white;
+      font-weight: bold;
+      margin-left: 10px;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
 <div class="stars"></div>
@@ -27,6 +69,7 @@
       <li><a href = "game.html">Игра</a></li>
       <li><a href = "history.html">Астрономия</a></li>
       <li><a href = "moons.html">Спутники</a></li>
+      <li><a href = "shop.html">Магазин</a></li>
       <li><a href = "index.html">Главная страница</a></li>
     </ul>
   </nav>
@@ -35,18 +78,39 @@
   <div class="sun">
     <div class="form-container">
       <h1>Подпишитесь на рассылку</h1>
-      <form>
-        <input type="email" placeholder="Ваш email" required>
-        <br>
-        <input type="submit" value="Подписаться">
+      <form id="subscribeForm">
+        <input type="email" id="email" placeholder="Ваш email" required><br><br>
+
+        <div id="captchaTextContainer">
+          <label for="captchaInput">Введите буквы:</label>
+          <span id="captchaText"></span>
+          <input type="text" id="captchaInput" placeholder="Введите капчу"><br>
+        </div>
+
+        <div id="captchaSumContainer" class="hidden">
+          <label for="captchaSumInput">Введите сумму:</label>
+          <span id="captchaSumText"></span>
+          <input type="text" id="captchaSumInput" placeholder="Введите сумму"><br>
+        </div>
+
+        <div class="captcha-buttons">
+          <input type="button" id="newCaptchaBtn" value="Другая капча">
+        </div>
+
+        <div id="errorMessage" class="error"></div>
+        <input type="submit" id="submitBtn" value="Подписаться" disabled>
       </form>
     </div>
 
+    <!-- Планеты -->
     <div class="planet orbit-1"></div>
     <div class="planet orbit-2"></div>
     <div class="planet orbit-3"></div>
   </div>
 </main>
+
+<script src="./js/captcha.js"></script>
+
 <footer>
   <div class="footer-container">
     <div class="footer-social">
